@@ -14,7 +14,7 @@ const App = () => {
 
 				setCountries(data);
 			} catch (err) {
-				console.error(getFailedCountries);
+				console.error("Error fetching data: ", err);
 			}
 		};
 		fetchData();
@@ -25,7 +25,7 @@ const App = () => {
 			{Countries?.map((ele) => {
 				return (
 					<div key={ele.cca3} className="card">
-						<img src={ele.flags.png} alt={ele.flags.alt} />
+						<img src={ele.flags.png} alt={`Flag of ${ele.name.common}`} />
 						<h4>{ele.name.common}</h4>
 					</div>
 				);
