@@ -14,7 +14,7 @@ const App = () => {
 
 				setCountries(data);
 			} catch (err) {
-				console.error(err);
+				console.error(getFailedCountries);
 			}
 		};
 		fetchData();
